@@ -5,7 +5,8 @@ function Note() {
   return (
     <div className='note_container'>
        <div className='card_note'>
-         <p className='note_text'>Doing aerobics exercises to gain strength</p>
+       <h2 className='note_title'>This is the title</h2>
+         <p className='note_text'>This is the content</p>
        </div>
     </div>
   )

@@ -2,14 +2,18 @@
 
 .note_container {
   background-color: #fff;
-  padding: 0.4rem;
+  padding: 0.4rem 0.6rem;
   width: 15%;
   border-radius: 25px;
   margin-left: 3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .note_text {
+    font-size: 1rem;
+}
+
+.note_title, .note_text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
     font-weight: 500;
 }

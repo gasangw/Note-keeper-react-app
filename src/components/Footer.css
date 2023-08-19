@@ -4,5 +4,6 @@
     bottom: 10px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
-    font-size: 0.9rem;
+    font-size: 1.12rem;
+    color: #ccc;
 }
