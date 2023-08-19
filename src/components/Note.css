@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=Lexend+Deca&family=McLaren&family=Montserrat:wght@300;400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto:wght@100;300;400;500;900&display=swap');
+
+.note_container {
+  background-color: #fff;
+  padding: 0.4rem;
+  width: 15%;
+  border-radius: 25px;
+  margin-left: 3rem;
+}
+
+.note_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
