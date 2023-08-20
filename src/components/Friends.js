@@ -1,11 +1,17 @@
 import React from 'react'
+import people from './data'
+import List from './List'
 
-function Friends(props) {
+function Friends() {
   return (
     <div>
-        <h3>{props.name}</h3>
-        <h6>{props.age}</h6>
-        <img src={props.image} alt='pic' />
+      {people.map(friend => {
+        return (
+          <div>
+            <List data={friend}/>
+          </div>
+        )
+      })}
     </div>
   )
 }
