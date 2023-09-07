@@ -1,21 +1,14 @@
 
-// import Greeting from "./components/greet";
-// import Friends from "./components/Friends";
-import Time from "./components/Time";
-//import people from "./components/data";
-
-// import Header from "./components/Header";
-// import Note from "./components/Note";
-// import { Footer } from "./components/Footer";
+import Header from "./components/Header";
+import Note from "./components/Note";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      {/* <Header />
+      <Header />
       <Note />
-      <Footer /> */}
-      {/* <Friends /> */}
-      <Time />
+      <Footer />
     </div>
   );
 }

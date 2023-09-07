@@ -3,7 +3,7 @@
 .note_container {
   background-color: #fff;
   padding: 0.4rem 0.6rem;
-  width: 15%;
+  width: 25%;
   border-radius: 25px;
   margin-left: 3rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -16,4 +16,37 @@
 .note_title, .note_text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+}
+
+.notes_holder {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  .notes_holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .note_container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .notes_holder {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    place-content: center;
+    margin-left: 0;
+  }
+
+  .note_container {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
