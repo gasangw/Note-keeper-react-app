@@ -3,14 +3,14 @@ import NoteList from './NoteList';
 import NoteInput from './NoteInput';
 import './Note.css'
 
-function Note({ data }) {
+function Note({ data,onAddNote, deleteNotesCard }) {
   return (
     <>
-    <NoteInput data={data}/>
+    <NoteInput onAddNote={onAddNote} />
       <div className='notes_holder'>
         {data.map((note)=> {
           return (
-            <NoteList  info={note} key={note.id}/>
+            <NoteList  info={note} key={note.id} deleteNotesCard={deleteNotesCard}/>
           )
         })}
       </div>

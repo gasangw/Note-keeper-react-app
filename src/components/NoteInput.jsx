@@ -1,32 +1,30 @@
 import React, { useState } from 'react'
 import './NoteInput.css'
 
-function NoteInput({data}) {
-     const [title, setTitle] = useState('')
-     const [content, setContent] = useState('')
-     const [myData, setMyData] = useState([...data])
+function NoteInput({onAddNote}) {
+   const [myContent, setMyContent] = useState({
+    title: '',
+    content: ''
+   })
+    const handleChange =(e) =>{
+        const { name, value} = e.target
+      setMyContent((prevState) => {
+        return {
+            ...prevState,
+            [name]: value
+        }
+      })
+    }
 
-     function handleTitle(e){
-        setTitle(e.target.value)
-     }
-
-     function handleContent(e){
-        setContent(e.target.value)
-     }
-
-     const handleFormInputs =(e)=>{
+    const submitForm =(e)=>{
         e.preventDefault()
-        setMyData(prevState => [...prevState, {title, content}])
-
-        setTitle('')
-        setContent('')
-        
-     }
+        onAddNote(myContent)        
+    }
   return (
     <form className='note_input_container'>
-        <input name='title' type='text' placeholder='title' onChange={handleTitle}/>
-        <textarea name="content" id="content" onChange={handleContent} cols="10" rows="4" placeholder='content' />
-        <button type='submit' onClick={handleFormInputs}>Add</button>
+        <input name='title' type='text' value={myContent.title} placeholder='title' onChange={handleChange }/>
+        <textarea name="content" value={myContent.content}  id="content" onChange={handleChange } cols="10" rows="4" placeholder='content' />
+        <button type='submit' onClick={submitForm}>Add</button>
     </form>
   )
 }

@@ -25,6 +25,15 @@
   flex-wrap: wrap;
 }
 
+.delete {
+  color: rgb(225, 225, 73);
+  cursor: pointer;
+  display: flex;
+  margin-left: auto;
+  width: 2rem;
+  height: 2.5rem;
+}
+
 @media (max-width: 1200px) {
   .notes_holder {
     display: grid;
