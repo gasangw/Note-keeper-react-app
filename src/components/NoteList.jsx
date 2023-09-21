@@ -1,7 +1,7 @@
 import React from 'react'
 
 function NoteList(props) {
-    const {id, title, content} = props.data
+    const {id, title, content} = props.info
   return (
       <div className='note_container' key={id}>
         <div className='card_note'>

@@ -1,17 +1,20 @@
 import React from 'react';
-import Notes from './NoteData';
 import NoteList from './NoteList';
+import NoteInput from './NoteInput';
 import './Note.css'
 
-function Note() {
+function Note({ data }) {
   return (
-    <div className='notes_holder'>
-      {Notes.map((note)=> {
-        return (
-          <NoteList  data={note} />
-        )
-      })}
-    </div>
+    <>
+    <NoteInput data={data}/>
+      <div className='notes_holder'>
+        {data.map((note)=> {
+          return (
+            <NoteList  info={note} key={note.id}/>
+          )
+        })}
+      </div>
+    </>
   )
 }
 
