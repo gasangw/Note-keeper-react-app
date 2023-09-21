@@ -13,7 +13,10 @@ function App() {
  }
 
  function deleteNotesCard(Id){
-   console.log(Id)
+  //console.log(Id)
+  notes.filter((item) => item.id === Id)
+  console.log(notes)
+
  }
 
   return (
