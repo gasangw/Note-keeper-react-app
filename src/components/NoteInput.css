@@ -1,0 +1,32 @@
+.note_input_container {
+  background-color: #fff;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  place-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.note_input_container input textarea{
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+}
+
+.note_input_container{
+  position: relative;
+}
+
+.note_input_container button {
+  position: absolute;
+  right: 18px;
+  bottom: -16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  color: #fff;
+  background-color: rgb(234, 234, 82);
+  border-radius: 75%;
+  padding: 12px 12px;
+}
