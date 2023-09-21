@@ -13,10 +13,9 @@ function App() {
  }
 
  function deleteNotesCard(Id){
-  //console.log(Id)
-  notes.filter((item) => item.id === Id)
-  console.log(notes)
-
+    setNotes((prevState) => {
+      prevState.filter((item)=> item.id !== Id)
+    })
  }
 
   return (
