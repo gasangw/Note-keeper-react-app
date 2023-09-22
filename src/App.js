@@ -14,7 +14,7 @@ function App() {
 
  function deleteNotesCard(Id){
     setNotes((prevState) => {
-      prevState.filter((item)=> item.id !== Id)
+      return prevState.filter((item, index)=> index !== Id)
     })
  }
 

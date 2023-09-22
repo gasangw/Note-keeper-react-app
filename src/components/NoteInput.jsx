@@ -18,7 +18,11 @@ function NoteInput({onAddNote}) {
 
     const submitForm =(e)=>{
         e.preventDefault()
-        onAddNote(myContent)        
+        onAddNote(myContent)  
+        setMyContent({
+          title: '',
+          content: ''
+         })   
     }
   return (
     <form className='note_input_container'>

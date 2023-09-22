@@ -8,9 +8,9 @@ function Note({ data,onAddNote, deleteNotesCard }) {
     <>
     <NoteInput onAddNote={onAddNote} />
       <div className='notes_holder'>
-        {data.map((note)=> {
+        {data.map((note, index)=> {
           return (
-            <NoteList  info={note} key={note.id} deleteNotesCard={deleteNotesCard}/>
+            <NoteList  info={note} key={index} id={index} deleteNotesCard={deleteNotesCard}/>
           )
         })}
       </div>
