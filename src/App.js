@@ -4,6 +4,9 @@ import Note from "./components/Note";
 import { useState  } from "react";
 import { Footer } from "./components/Footer";
 import Notes from "./components/NoteData";
+import Home from "./components/Home";
+import NoteInput from './components/NoteInput'
+import {Route, Routes} from 'react-router-dom'
 
 function App() {
  const [notes, setNotes] = useState([...Notes])
@@ -21,7 +24,11 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Note  data={notes} onAddNote={addNote} deleteNotesCard={deleteNotesCard}/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/add' element={ <NoteInput  onAddNote={addNote}/>} />
+        <Route path='/all-notes' element={ <Note  data={notes} deleteNotesCard={deleteNotesCard}/>} />
+      </Routes>
       <Footer />
     </div>
   );

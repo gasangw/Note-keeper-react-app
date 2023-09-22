@@ -1,12 +1,10 @@
 import React from 'react';
 import NoteList from './NoteList';
-import NoteInput from './NoteInput';
 import './Note.css'
 
-function Note({ data,onAddNote, deleteNotesCard }) {
+function Note({ data, deleteNotesCard }) {
   return (
     <>
-    <NoteInput onAddNote={onAddNote} />
       <div className='notes_holder'>
         {data.map((note, index)=> {
           return (

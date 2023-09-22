@@ -2,12 +2,49 @@
 
 .head__background {
   background-color: #f5ba13;
-  padding: 5px 8rem;
+  padding: 0 8rem;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+
+.logo {
+  font-size: 12px;
+  font-style: italic;
 }
 
 .head__title {
-    font-family: 'McLaren', cursive;
     font-size: 1.64rem;
     color: #eee;
+}
+
+.head__title, .nav_links {
+  font-family: 'McLaren', cursive;
+}
+
+.nav_links, a {
+  display: flex;
+  color: #eee;
+  gap: 18px;
+  text-decoration: none;
+}
+
+a:hover {
+   border-bottom: 5px solid rgb(223, 56, 56);
+}
+
+@media (max-width: 560px) {
+  .head__background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-content: center;
+  }
+
+  .nav_links, a {
+    display: flex;
+  flex-direction: column;
+  }
+  
 }
